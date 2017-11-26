@@ -13,7 +13,7 @@ import { Categoria } from '../Models/categoria.model';
 @Injectable()
 export class CategoriasService {
 
-    public base: string = "http://localhost:8000/api/v1/";
+    public base: string = "http://localhost:8000/api/";
 	public options: RequestOptions;
 	public headers: Headers;
 
@@ -32,31 +32,31 @@ export class CategoriasService {
 	//GET
 	getCategorias(): Observable<Categoria[]>
 	{
-		return this.http.get(this.base+'categorias', this.options).map((res: Response) => res.json());
+		return this.http.get(this.base+'categoria', this.options).map((res: Response) => res.json());
 	}
 
 	//POST
 	registerCategoria(categoria: Categoria)
 	{
-		return this.http.post( this.base+'categorias', JSON.stringify(categoria), this.options).map((res: Response) => res.json());
+		return this.http.post( this.base+'categoria', JSON.stringify(categoria), this.options).map((res: Response) => res.json());
 
 	}
 
 	//GET
 	getCategoria(id) : Observable<Categoria>
 	{
-		return this.http.get(this.base+'categorias/'+id, this.options).map((res: Response) => res.json());
+		return this.http.get(this.base+'categoria/'+id, this.options).map((res: Response) => res.json());
 	}
 
 	//PUT
 	editCategoria(categoria: Categoria, id: number)
 	{
-		return this.http.put(this.base+'categorias/'+id, JSON.stringify(categoria), this.options).map((res: Response) => res.json());
+		return this.http.put(this.base+'categoria/'+id, JSON.stringify(categoria), this.options).map((res: Response) => res.json());
 	}
 
 	//DELETE
 	deleteCategoria(id) {
-		return this.http.delete(this.base+'categorias/'+id, this.options).map((res: Response) => res.json());
+		return this.http.delete(this.base+'categoria/'+id, this.options).map((res: Response) => res.json());
 	}
 
 

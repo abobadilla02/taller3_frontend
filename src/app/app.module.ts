@@ -59,6 +59,10 @@ import { LoginComponent } from './Components/login/login.component';
 import { NoticiasComponent } from './Components/noticias/noticias.component';
 import { ToolbarComponent } from './Components/toolbar/toolbar.component';
 import { HomeComponent } from './Components/home/home.component';
+import { VernoticiaComponent } from './Components/noticias/vernoticia/vernoticia.component';
+import { MisnoticiasComponent } from './Components/noticias/misnoticias/misnoticias.component';
+import { AgregarnoticiaComponent } from './Components/noticias/misnoticias/agregarnoticia/agregarnoticia.component';
+import { EditarnoticiaComponent } from './Components/noticias/misnoticias/editarnoticia/editarnoticia.component';
 
 @NgModule({
   declarations:
@@ -69,13 +73,18 @@ import { HomeComponent } from './Components/home/home.component';
     LoginComponent,
     NoticiasComponent,
     ToolbarComponent,
-    HomeComponent
+    HomeComponent,
+    VernoticiaComponent,
+    MisnoticiasComponent,
+    AgregarnoticiaComponent,
+    EditarnoticiaComponent
   ],
 
   entryComponents:
   [
     //Componentes de entrada para Modales en Materialize
-   
+     AgregarnoticiaComponent,
+    EditarnoticiaComponent
     //MensajeErrorComponent
   ],
 

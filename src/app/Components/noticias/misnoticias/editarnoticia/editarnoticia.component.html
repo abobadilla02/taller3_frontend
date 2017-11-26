@@ -1,0 +1,41 @@
+<h1 mat-dialog-title style="text-align: center;">Editar noticia</h1>
+
+<div mat-dialog-content>
+
+  <p>Titular</p>
+
+  <input matInput tabindex="1" [(ngModel)]="noticia.titular">
+
+
+  <p>Entrada</p>
+
+  <input matInput tabindex="1" [(ngModel)]="noticia.entrada">
+
+
+  <p>Cuerpo</p>
+
+  <input matInput tabindex="1" [(ngModel)]="noticia.cuerpo">
+
+
+  <p>Imagen</p>
+
+  <input matInput tabindex="1" [(ngModel)]="noticia.imagen">
+
+   <p>Categoría</p>
+   <mat-form-field>
+	  <mat-select placeholder="Categoría" [(ngModel)]="noticia.categoria_id">
+	    <mat-option *ngFor="let categoria of categorias" [(value)]="categoria.id">
+	      {{ categoria.descripcion }}
+	    </mat-option>
+	  </mat-select>
+	</mat-form-field>
+
+
+  
+</div>
+
+
+<div mat-dialog-actions>
+  <button mat-button class="boton-aceptar" (click)="editarNoticia()" tabindex="2">Editar noticia</button>
+  <button mat-button (click)="onNoClick()" tabindex="-1">Cancelar</button>
+</div>

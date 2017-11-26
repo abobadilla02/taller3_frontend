@@ -1,8 +1,13 @@
 <mat-toolbar color="primary" style="background-color:#191970;">
     <img src="https://industrynet.com/files/logo/524024.jpg" alt="logo" class="responsive-img" style="max-width: 50%; max-height: 50%">
     <span class="example-spacer"></span>
-
+	
+	<!-- Toolbar para cuando el usuario no está logueado-->
     <button mat-button *ngIf="isLogged===false" (click)="irLogin()">Iniciar sesión</button>
+	
+	<!-- Toolbar para cuando el usuario está logueado -->
+    <button mat-button *ngIf="isLogged" (click)="misNoticias()">Mis noticias</button>
     <button mat-button *ngIf="isLogged" (click)="cerrarSesion()">Cerrar sesión</button>
+
 
 </mat-toolbar>

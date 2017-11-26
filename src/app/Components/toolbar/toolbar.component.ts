@@ -38,7 +38,10 @@ export class ToolbarComponent implements OnInit {
     this.isLogged=false;
     this.authService.logout();
     this.router.navigate(['']);
+  }
 
+  misNoticias() {
+    this.router.navigate(['misNoticias']);
   }
 
 

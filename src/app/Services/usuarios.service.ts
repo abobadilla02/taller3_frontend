@@ -13,7 +13,7 @@ import { Usuario } from '../Models/usuario.model';
 @Injectable()
 export class UsuariosService {
 
-    public base: string = "http://localhost:8000/api/v1/";
+    public base: string = "http://localhost:8000/api/";
 	public options: RequestOptions;
 	public headers: Headers;
 
@@ -32,31 +32,31 @@ export class UsuariosService {
 	//GET
 	getUsuarios(): Observable<Usuario[]>
 	{
-		return this.http.get(this.base+'usuarios', this.options).map((res: Response) => res.json());
+		return this.http.get(this.base+'users', this.options).map((res: Response) => res.json());
 	}
 
 	//POST
 	registerUsuario(usuario: Usuario)
 	{
-		return this.http.post( this.base+'usuarios', JSON.stringify(usuario), this.options).map((res: Response) => res.json());
+		return this.http.post( this.base+'users', JSON.stringify(usuario), this.options).map((res: Response) => res.json());
 
 	}
 
 	//GET
 	getUsuario(id) : Observable<Usuario>
 	{
-		return this.http.get(this.base+'usuarios/'+id, this.options).map((res: Response) => res.json());
+		return this.http.get(this.base+'users/'+id, this.options).map((res: Response) => res.json());
 	}
 
 	//PUT
 	editUsuario(usuario: Usuario, id: number)
 	{
-		return this.http.put(this.base+'usuarios/'+id, JSON.stringify(usuario), this.options).map((res: Response) => res.json());
+		return this.http.put(this.base+'users/'+id, JSON.stringify(usuario), this.options).map((res: Response) => res.json());
 	}
 
 	//DELETE
 	deleteUsuario(id) {
-		return this.http.delete(this.base+'usuarios/'+id, this.options).map((res: Response) => res.json());
+		return this.http.delete(this.base+'users/'+id, this.options).map((res: Response) => res.json());
 	}
 
 

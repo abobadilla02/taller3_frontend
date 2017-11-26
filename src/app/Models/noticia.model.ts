@@ -5,8 +5,8 @@ export class Noticia {
   cuerpo: string;
   imagen: string;
   fecha: string;
-  categoria_id: string;
-  usuario_id: string;
+  categoria_id: number;
+  usuario_id: number;
 
   constructor()
   {
@@ -16,7 +16,7 @@ export class Noticia {
   	this.cuerpo ="";
   	this.imagen = "";
     this.fecha = "";
-    this.categoria_id = "";
-    this.usuario_id = "";
+    this.categoria_id = 0;
+    this.usuario_id = 0;
   }
 }

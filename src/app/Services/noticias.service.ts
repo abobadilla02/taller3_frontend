@@ -13,7 +13,7 @@ import { Noticia } from '../Models/noticia.model';
 @Injectable()
 export class NoticiasService {
 
-    public base: string = "http://localhost:8000/api/v1/";
+    public base: string = "http://localhost:8000/api/";
 	public options: RequestOptions;
 	public headers: Headers;
 
@@ -32,31 +32,31 @@ export class NoticiasService {
 	//GET
 	getNoticias(): Observable<Noticia[]>
 	{
-		return this.http.get(this.base+'noticias', this.options).map((res: Response) => res.json());
+		return this.http.get(this.base+'noticia', this.options).map((res: Response) => res.json());
 	}
 
 	//POST
 	registerNoticia(noticia: Noticia)
 	{
-		return this.http.post( this.base+'noticias', JSON.stringify(noticia), this.options).map((res: Response) => res.json());
+		return this.http.post( this.base+'noticia', JSON.stringify(noticia), this.options).map((res: Response) => res.json());
 
 	}
 
 	//GET
 	getNoticia(id) : Observable<Noticia>
 	{
-		return this.http.get(this.base+'noticias/'+id, this.options).map((res: Response) => res.json());
+		return this.http.get(this.base+'noticia/'+id, this.options).map((res: Response) => res.json());
 	}
 
 	//PUT
 	editNoticia(noticia: Noticia, id: number)
 	{
-		return this.http.put(this.base+'noticias/'+id, JSON.stringify(noticia), this.options).map((res: Response) => res.json());
+		return this.http.put(this.base+'noticia/'+id, JSON.stringify(noticia), this.options).map((res: Response) => res.json());
 	}
 
 	//DELETE
 	deleteNoticia(id) {
-		return this.http.delete(this.base+'noticias/'+id, this.options).map((res: Response) => res.json());
+		return this.http.delete(this.base+'noticia/'+id, this.options).map((res: Response) => res.json());
 	}
 
 
