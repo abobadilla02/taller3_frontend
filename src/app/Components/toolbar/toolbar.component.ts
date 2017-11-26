@@ -44,6 +44,9 @@ export class ToolbarComponent implements OnInit {
     this.router.navigate(['misNoticias']);
   }
 
+  todasNoticias() {
+    this.router.navigate(['']);
+  }
 
 
 

@@ -2,7 +2,8 @@
   <h3>Mis noticias</h3>
 </div>
 
-  <mat-card style="width: 500px;" *ngFor="let noticia of totalNoticias">
+<div class="main-div"> 
+  <mat-card class="noticia" *ngFor="let noticia of totalNoticias">
     <mat-card-title>
       <mat-card-title>
         <span>{{ noticia.titular }}</span>
@@ -18,7 +19,7 @@
       <button mat-button (click)="edicionNoticia(noticia)">Modificar</button>
     </mat-card-actions>
   </mat-card>
-
+</div>
 
  <div class="fixed-action-btn">
 		<a class="btn-floating btn-large blue" (click)="nuevaNoticia()">

@@ -6,6 +6,7 @@
     <button mat-button *ngIf="isLogged===false" (click)="irLogin()">Iniciar sesión</button>
 	
 	<!-- Toolbar para cuando el usuario está logueado -->
+	<button mat-button *ngIf="isLogged" (click)="todasNoticias()">Inicio</button>
     <button mat-button *ngIf="isLogged" (click)="misNoticias()">Mis noticias</button>
     <button mat-button *ngIf="isLogged" (click)="cerrarSesion()">Cerrar sesión</button>
 

@@ -1,5 +1,8 @@
+// Se importan componentes
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+// Se importa el servicio y el modelo para noticias
 import { NoticiasService } from '../../Services/noticias.service';
 import { Noticia } from '../../Models/noticia.model'; 
 

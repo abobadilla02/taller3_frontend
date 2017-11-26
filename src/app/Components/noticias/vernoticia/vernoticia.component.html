@@ -6,13 +6,12 @@
     </mat-card-title>
     <mat-card-content>
     	<p>{{ noticia.fecha }}. Publicado por: {{ usuario }} </p>
-    	<p>Categoría: {{ categoria }} </p>
+    	
       <p> {{ noticia.entrada }}</p>
     </mat-card-content>
-    <img mat-card-image src= "{{ noticia.imagen }}">
+    <img mat-card-image src="{{ noticia.imagen }}">
     <mat-card-content>
       <p>{{ noticia.cuerpo }}</p>
+      <p>Categoría: {{ categoria }} </p>
     </mat-card-content>
-
   </mat-card>
-

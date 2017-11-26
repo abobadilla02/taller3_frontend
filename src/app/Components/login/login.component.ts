@@ -1,10 +1,10 @@
+// Importe de componentes
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+// Importe de servicios
 import { AuthenticationService }  from '../../Services/authentication.service';
 import { EventosService } from '../../Services/eventos.service';
-
-import { UsuariosService } from '../../Services/usuarios.service';
-import { Usuario } from '../../Models/usuario.model';
 
 @Component({
   selector: 'app-login',
@@ -13,17 +13,15 @@ import { Usuario } from '../../Models/usuario.model';
 })
 export class LoginComponent implements OnInit {
 
+  // Inicialización de variables 
 	public password:string;
 	public email:string;
-  public totalUsuarios: Usuario[];
 
   constructor(
     public router:Router,
     public authService:AuthenticationService, 
-    public eventosService:EventosService,
-    public usuarioService: UsuariosService) { 
+    public eventosService:EventosService) { 
 
-    this.totalUsuarios = [];
 	}
 
   ngOnInit() {

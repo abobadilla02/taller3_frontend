@@ -8,14 +8,15 @@
 
 
   <p>Entrada</p>
-
-  <input matInput tabindex="1" [(ngModel)]="nuevaNoticia.entrada">
-
+  <mat-form-field class="example-full-width">
+    <textarea matInput tabindex="1" placeholder="Ingresar entrada de la noticia" [(ngModel)]="nuevaNoticia.entrada"></textarea>
+  </mat-form-field>
 
   <p>Cuerpo</p>
-
-  <input matInput tabindex="1" [(ngModel)]="nuevaNoticia.cuerpo">
-
+  
+  <mat-form-field class="example-full-width">
+    <textarea matInput tabindex="1" placeholder="Ingresar cuerpo de la noticia" [(ngModel)]="nuevaNoticia.cuerpo"></textarea>
+  </mat-form-field>
 
   <p>Imagen</p>
 
@@ -23,7 +24,7 @@
 
    <p>Categoría</p>
    <mat-form-field>
-	  <mat-select placeholder="Categoría" [(ngModel)]="nuevaNoticia.categoria_id">
+	  <mat-select placeholder="Elegir categoría" [(ngModel)]="nuevaNoticia.categoria_id">
 	    <mat-option *ngFor="let categoria of categorias" [(value)]="categoria.id">
 	      {{ categoria.descripcion }}
 	    </mat-option>

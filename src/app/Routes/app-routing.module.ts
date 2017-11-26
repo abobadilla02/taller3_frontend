@@ -5,8 +5,6 @@ import { LoginComponent } from '../Components/login/login.component';
 
 import { NoticiasComponent } from '../Components/noticias/noticias.component';
 
-import { HomeComponent } from '../Components/home/home.component';
-
 import { VernoticiaComponent } from '../Components/noticias/vernoticia/vernoticia.component';
 
 import { MisnoticiasComponent } from '../Components/noticias/misnoticias/misnoticias.component';
@@ -17,8 +15,6 @@ const routes: Routes =
   { path: 'login',  component: LoginComponent },
   
   { path: '',  component: NoticiasComponent },
-
-  //{ path: '',  component: HomeComponent },
 
   { path: 'noticia/:id', component: VernoticiaComponent },
 

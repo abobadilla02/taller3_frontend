@@ -1,12 +1,11 @@
-//SERVICIOS
+// Se importan los servicios creados
 import { AuthenticationService } from './Services/authentication.service';
 import { EventosService } from './Services/eventos.service';
 import { CategoriasService } from './Services/categorias.service';
 import { NoticiasService } from './Services/noticias.service';
 import { UsuariosService } from './Services/usuarios.service';
 
-
-//MODULOS
+// Se importan los modulos que se usarán
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -49,16 +48,17 @@ import {
 } from '@angular/material';
 import {CdkTableModule} from '@angular/cdk/table';
 
-// COMPONENTES
 
-//Componentes Raices
+// Se importan los componentes a usar
+// Componentes generales
 import { AppComponent } from './app.component';
-//LOGIN
-//OTROS
-import { LoginComponent } from './Components/login/login.component';
-import { NoticiasComponent } from './Components/noticias/noticias.component';
 import { ToolbarComponent } from './Components/toolbar/toolbar.component';
-import { HomeComponent } from './Components/home/home.component';
+
+// Componente login
+import { LoginComponent } from './Components/login/login.component';
+
+// Componentes realizar el CRUD de noticias
+import { NoticiasComponent } from './Components/noticias/noticias.component';
 import { VernoticiaComponent } from './Components/noticias/vernoticia/vernoticia.component';
 import { MisnoticiasComponent } from './Components/noticias/misnoticias/misnoticias.component';
 import { AgregarnoticiaComponent } from './Components/noticias/misnoticias/agregarnoticia/agregarnoticia.component';
@@ -67,13 +67,15 @@ import { EditarnoticiaComponent } from './Components/noticias/misnoticias/editar
 @NgModule({
   declarations:
   [
-    //Componentes Raiz
+    //Componentes generales
     AppComponent,
-    //MensajeErrorComponent,
-    LoginComponent,
-    NoticiasComponent,
     ToolbarComponent,
-    HomeComponent,
+
+    // Componente login
+    LoginComponent,
+
+    // Componente para noticias
+    NoticiasComponent,
     VernoticiaComponent,
     MisnoticiasComponent,
     AgregarnoticiaComponent,
@@ -83,9 +85,8 @@ import { EditarnoticiaComponent } from './Components/noticias/misnoticias/editar
   entryComponents:
   [
     //Componentes de entrada para Modales en Materialize
-     AgregarnoticiaComponent,
+    AgregarnoticiaComponent,
     EditarnoticiaComponent
-    //MensajeErrorComponent
   ],
 
 
@@ -135,13 +136,13 @@ import { EditarnoticiaComponent } from './Components/noticias/misnoticias/editar
   providers:
   [
     appRoutingProviders,
+    
+    //SERVICIOS
     AuthenticationService,
     EventosService,
     NoticiasService,
     UsuariosService,
     CategoriasService
-
-    //SERVICIOS
   ],
 
   bootstrap:
