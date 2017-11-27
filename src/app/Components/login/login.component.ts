@@ -22,6 +22,12 @@ export class LoginComponent implements OnInit {
     public authService:AuthenticationService, 
     public eventosService:EventosService) { 
 
+    // Validación de usuario logueado
+    if( (localStorage.getItem('currentUser')) )
+    {
+      // Si está logueado, lo envía a la página principal
+      this.router.navigate([''])
+    }
 	}
 
   ngOnInit() {
@@ -30,13 +36,15 @@ export class LoginComponent implements OnInit {
   login()
   {
 
-  	if( this.password != "" && this.email != "" ) {
+    if( this.password != "" && this.email != "" ) {
 
-  		this.authService.login(this.email,this.password).subscribe((data) => {
+      this.authService.login(this.email,this.password).subscribe((data) => {
         
           this.eventosService.SignIn();
           this.router.navigate(['']);
         });
-  	}
+    }
+
   }
+
 }
