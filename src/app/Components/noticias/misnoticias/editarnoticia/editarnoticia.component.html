@@ -8,14 +8,15 @@
 
 
   <p>Entrada</p>
-
-  <input matInput tabindex="1" [(ngModel)]="noticia.entrada">
-
+  <mat-form-field class="example-full-width">
+    <textarea matInput tabindex="1" [(ngModel)]="noticia.entrada"></textarea>
+  </mat-form-field>
 
   <p>Cuerpo</p>
 
-  <input matInput tabindex="1" [(ngModel)]="noticia.cuerpo">
-
+  <mat-form-field class="example-full-width">
+    <textarea matInput tabindex="1" [(ngModel)]="noticia.cuerpo"></textarea>
+  </mat-form-field>
 
   <p>Imagen</p>
 

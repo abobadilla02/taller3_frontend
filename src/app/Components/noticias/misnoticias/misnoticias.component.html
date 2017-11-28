@@ -2,24 +2,26 @@
   <h3>Mis noticias</h3>
 </div>
 
-<div class="main-div"> 
-  <mat-card class="noticia" *ngFor="let noticia of totalNoticias">
-    <mat-card-title>
+<mat-grid-list cols="3" rowHeight="1:1.4">
+  <mat-grid-tile *ngFor="let noticia of totalNoticias">
+      <mat-card class="noticia">
       <mat-card-title>
-        <span>{{ noticia.titular }}</span>
+        <mat-card-title>
+          <span>{{ noticia.titular }}</span>
+        </mat-card-title>
       </mat-card-title>
-    </mat-card-title>
-    <img mat-card-image src= "{{ noticia.imagen }}">
-    <mat-card-content>
-      <p>{{ noticia.entrada }}</p>
-    </mat-card-content>
-    <mat-card-actions layout="row" layout-align="start center">
-      <button mat-button (click)="verNoticia(noticia.id)">Ver</button>
-      <button mat-button (click)="eliminarNoticia(noticia.id)">Eliminar</button>
-      <button mat-button (click)="edicionNoticia(noticia)">Modificar</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+      <img mat-card-image src= "{{ noticia.imagen }}">
+      <mat-card-content>
+        <p >{{ noticia.entrada }}</p>
+      </mat-card-content>
+      <mat-card-actions layout="row" layout-align="start center">
+        <button mat-button (click)="verNoticia(noticia.id)">Ver</button>
+        <button mat-button (click)="eliminarNoticia(noticia.id)">Eliminar</button>
+        <button mat-button (click)="edicionNoticia(noticia)">Modificar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
 
  <div class="fixed-action-btn">
 		<a class="btn-floating btn-large blue" (click)="nuevaNoticia()">

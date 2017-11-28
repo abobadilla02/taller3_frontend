@@ -1,16 +1,23 @@
-<div class="main-div"> 
-  <mat-card class="noticia" *ngFor="let noticia of totalNoticias">
-    <mat-card-title>
-      <mat-card-title>
-        <span>{{ noticia.titular }}</span>
-      </mat-card-title>
-    </mat-card-title>
-    <img mat-card-image src= "{{ noticia.imagen }}">
-    <mat-card-content>
-      <p>{{ noticia.entrada }}</p>
-    </mat-card-content>
-    <mat-card-actions layout="row" layout-align="start center">
-      <button mat-button (click)="verNoticia(noticia.id)">Leer más</button>
-    </mat-card-actions>
-  </mat-card>
+
+<div layout="row" layout-align="center start">
+  <h3>Noticias recientes</h3>
 </div>
+
+<mat-grid-list cols="3" rowHeight="1:1.4">
+  <mat-grid-tile *ngFor="let noticia of totalNoticias">
+      <mat-card class="noticia">
+        <mat-card-title>
+          <mat-card-title>
+            <span>{{ noticia.titular }}</span>
+          </mat-card-title>
+        </mat-card-title>
+        <img mat-card-image src= "{{ noticia.imagen }}">
+        <mat-card-content>
+          <p>{{ noticia.entrada }}</p>
+        </mat-card-content>
+        <mat-card-actions layout="row" layout-align="start center">
+          <button mat-button (click)="verNoticia(noticia.id)">Leer más</button>
+        </mat-card-actions>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
